@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - capstone project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/capstone_project_fashionhub.styles.css" asp-append-version="true" />
+
+    @* Feather Icons *@
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    @* AOS Animated scroll *@
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Fashion<span>Hub</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Dashboard">Laporan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Contact">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="layout-content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-content" data-aos="fade-up">
+            <a class="navbar-logo" asp-area="" asp-page="/Index">Fashion<span>Hub</span></a>
+
+            <div class="links">
+                <a asp-area="" asp-page="/Index">Home</a>
+                <a asp-area="" asp-page="/Dashboard">Dashboard</a>
+                <a asp-area="" asp-page="/Contact">Kontak</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i data-feather="instagram"></i></a>
+                <a href="#"><i data-feather="twitter"></i></a>
+                <a href="#"><i data-feather="facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="label-thanks">
+
+            <div class="container" data-aos="fade-up">
+                <p>Terimakasih sudah mengunjungi Kami jika ada pertanyaan bisa hubungi kami pada laman <a asp-area="" asp-page="/Contact">Kontak</a></p>
+                &copy; 2024 - Capstone Project Fashionhub - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+
+            <div class="contact-us" data-aos="fade-up">
+                <div class="contact-tlpn">
+                    <i data-feather="phone"></i>
+                    <h5>+62857-7089-8998</h5>
+                </div>
+
+                <div class="contact-email">
+                    <i data-feather="mail"></i>
+                    <a href="#">csfashionhub@gmail.com</a>
+                </div>
+
+                <p>Jl. Jenderal Basuki Rahmat No.8-12, Kedungdoro, Tegalsari</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @* Feather Icons *@
+    <script>
+        feather.replace();
+    </script>
+
+    @* AOS Animated scroll *@
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

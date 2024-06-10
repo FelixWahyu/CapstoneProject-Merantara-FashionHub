@@ -1,0 +1,194 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* Section Hero start *@
+<section class="hero">
+    <div class="hero-content text-center">
+        <h1>Selamat datang di FashionHub</h1>
+        <h2>Temukan gaya Anda, ciptakan tren Anda</h2>
+    </div>
+</section>
+@* Section Hero end *@
+
+@* Section History *@
+<h2 class="judul-profil" data-aos="fade-up"><span>Tentang</span> Kami</h2>
+<section class="history">
+    <div class="row" data-aos="fade-up">
+        <div class="history-content" data-aos="fade-up">
+            <h3>Sejarah FashionHub</h3>
+            <p>
+                FashionHub lahir dari mimpi besar untuk menjadi pusat utama informasi, inspirasi, dan inovasi dalam dunia mode. Berawal dari ide sederhana di sebuah kamar kecil pada tahun 2010, pendiri kami melihat potensi besar dalam menghubungkan pecinta fashion dari berbagai belahan dunia melalui platform digital. Mereka percaya bahwa fashion adalah bahasa universal yang dapat menyatukan berbagai budaya dan identitas.
+                Pada tahun 2011, versi pertama FashionHub diluncurkan dengan misi memberikan berita terkini, tren terbaru, dan panduan gaya kepada audiens global. Dengan konten yang segar dan relevan, FashionHub segera menarik perhatian ribuan pengunjung setiap harinya.
+            </p>
+            <p id="hidden">
+                Artikel-artikel eksklusif, wawancara dengan desainer terkenal, dan liputan langsung dari peragaan busana di berbagai kota mode dunia seperti Paris, Milan, New York, dan Tokyo membuat FashionHub menjadi sumber terpercaya di industri ini.
+                Seiring berjalannya waktu, FashionHub terus berinovasi dengan menambahkan fitur-fitur baru. Pada tahun 2013, kami meluncurkan segmen belanja online yang memungkinkan pengguna untuk membeli koleksi busana dari desainer independen hingga merek ternama, semuanya dalam satu platform. Kami juga memperkenalkan komunitas mode interaktif di mana pengguna dapat berbagi inspirasi, tips, dan tren gaya pribadi mereka.
+                Tahun 2016 menandai tonggak penting ketika FashionHub merambah ke dunia mobile dengan aplikasi resmi, memungkinkan akses mudah ke dunia fashion kapan saja dan di mana saja. Dengan desain yang intuitif dan fitur personalisasi, aplikasi ini mempermudah pengguna untuk tetap terhubung dengan tren terbaru dan melakukan pembelian secara langsung dari ponsel mereka.
+                Hingga saat ini, FashionHub terus berkembang menjadi ekosistem mode yang dinamis dan inovatif. Kami berkomitmen untuk selalu menghadirkan konten berkualitas, memperluas jangkauan kami, dan beradaptasi dengan teknologi terbaru untuk memenuhi kebutuhan para fashionista di seluruh dunia. Dengan jutaan pengguna setia dan jaringan mitra yang luas, FashionHub tetap menjadi destinasi utama bagi mereka yang ingin mengeksplorasi dunia fashion secara mendalam.
+            </p>
+            <button id="btn-show" class="btn-show" onclick="showMore()" >Show more</button>
+            <button id="btn-hidden" class="btn-hidden" onclick="showLess()" >Show less</button>
+        </div>
+        <div class="history-image" data-aos="fade-up">
+            <img src="../img/bg-history.jpg" alt="history image">
+        </div>
+    </div>
+</section>
+@* Section History end *@
+
+@* Section Visi dan Misi start *@
+<section class="about">
+    <div class="content">
+        <div class="content-main" data-aos="fade-up">
+            <div class="content-image" data-aos="fade-up">
+                <img src="../img/image-about1.jpg" alt="Gambar1">
+            </div>
+
+            <div class="content-desc" data-aos="fade-up">
+                <h3>Visi FashionHub</h3>
+                <p>
+                    Visi kami adalah menjadi destinasi utama global untuk inspirasi, inovasi, dan informasi dalam dunia fashion, yang menghubungkan pecinta mode dari seluruh penjuru dunia melalui platform digital yang dinamis dan inklusif.
+                </p>
+                <h3>Misi FashionHub</h3>
+                <ol>
+                    <li>Menginspirasi Kreativitas: Menyediakan konten yang segar, tren terbaru, dan wawancara eksklusif dengan desainer ternama untuk menginspirasi kreativitas dan inovasi dalam gaya pribadi setiap pengguna.</li>
+                    <li>Memfasilitasi Akses: Menyediakan platform yang mudah digunakan untuk mengakses koleksi busana dari desainer independen hingga merek ternama, sehingga setiap pecinta mode dapat menemukan dan membeli produk yang sesuai dengan gaya dan kepribadian mereka.</li>
+                    <li>Mendorong Inovasi: Terus berinovasi dengan teknologi terbaru untuk memberikan pengalaman pengguna yang optimal, termasuk aplikasi mobile yang intuitif dan fitur personalisasi yang canggih.</li>
+                    <li>Membangun Komunitas: Membentuk komunitas mode yang inklusif dan interaktif di mana pengguna dapat berbagi inspirasi, tips, dan pengalaman mereka, serta mendukung satu sama lain dalam mengeksplorasi dunia fashion.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+@* Section Visi dan Misi end *@
+
+@* Section Layanan Start *@
+<div class="layanan-judul">
+    <h2 data-aos="fade-up"><span>Layanan dan Produk</span> Kami</h2>
+    <p data-aos="fade-up">Selain produk yang kami jual kami juga menyediakan layanan lainya. Berikut beberapa layanan dan produk yang kami berikan dari perusahaan kami</p>
+</div>
+
+<section class="layanan">
+    <div class="slider" data-aos="fade-up">
+        <div class="slide active">
+            <img src="../img/layanan/1.jpg" alt="Layanan1">
+            <div class="content-layanan">
+                <h2>Pengiriman</h2>
+                <p>Layanan pengiriman produk kepada pelanggan.</p>
+                <h3>Biaya: Rp 25.000</h3>
+                <a class="button" asp-area="" asp-page="/Contact" >Selengkapnya</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../img/layanan/4.jpg" alt="Layanan2">
+            <div class="content-layanan">
+                <h2>Pengembalian Barang</h2>
+                <p>Layanan pengembalian barang yang sudah dibeli.</p>
+                <h3>Gratis</h3>
+                <a class="button" asp-area="" asp-page="/Contact" >Selengkapnya</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../img/layanan/3.jpg" alt="Layanan3">
+            <div class="content-layanan">
+                <h2>Konsultasi Mode</h2>
+                <p>Layanan konsultasi dengan pakar mode.</p>
+                <h3>Biaya: Rp 75.000</h3>
+                <a class="button" asp-area="" asp-page="/Contact" >Selengkapnya</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../img/layanan/2.jpg" alt="Layanan4">
+            <div class="content-layanan">
+                <h2>Perbaikan Barang</h2>
+                <p>Layanan perbaikan barang yang rusak.</p>
+                <h3>Biaya: Rp 40.000</h3>
+                <a class="button" asp-area="" asp-page="/Contact" >Selengkapnya</a>
+            </div>
+        </div>
+
+        <div class="controls">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </div>
+</section>
+@* Section Layanan End *@
+
+@* Section Produk start *@
+<section class="produk">
+    <div class="kategori-judul" data-aos="fade-up">
+        <h2>Pria</h2>
+    </div>
+    
+    <div class="produk-content">
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/1.jpg" alt="Produk1">
+            <div class="produk-descripsi">
+                <h3>Pakaian</h3>
+                <p>Kemeja elegan yang terbuat dari bahan berkualitas tinggi, dirancang untuk memberikan kenyamanan dan tampilan memukau baik untuk acara formal maupun kasual Anda.</p>
+                <h4>Discount up to 80%</h4>
+            </div>
+        </div>
+
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/7.jpg" alt="Produk2">
+            <div class="produk-descripsi">
+                <h3>Sepatu</h3>
+                <p>Sepatu yang tidak hanya nyaman tetapi juga stylish, sempurna untuk berbagai aktivitas Anda dan cocok untuk segala suasana, dari santai hingga semi-formal.</p>
+                <h4>Discount up to 70%</h4>
+            </div>
+        </div>
+
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/5.jpg" alt="Produk3">
+            <div class="produk-descripsi">
+                <h3>Aksesoris</h3>
+                <p>Aksesoris trendi yang menambah sentuhan elegan pada penampilan Anda. Ideal untuk melengkapi gaya sehari-hari atau menonjolkan pesona Anda di acara spesial.</p>
+                <h4>Discount up to 70%</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="produk">
+    <div class="kategori-judul" data-aos="fade-up">
+        <h2>Wanita</h2>
+    </div>
+
+    <div class="produk-content">
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/6.jpg" alt="Produk1">
+            <div class="produk-descripsi">
+                <h3>Pakaian</h3>
+                <p>Gaun elegan yang terbuat dari bahan berkualitas tinggi, dirancang untuk memberikan kenyamanan dan tampilan memukau baik untuk acara formal maupun kasual Anda.</p>
+                <h4>Discount up to 80%</h4>
+            </div>
+        </div>
+
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/4.jpg" alt="Produk2">
+            <div class="produk-descripsi">
+                <h3>Sepatu</h3>
+                <p>Sepatu yang tidak hanya nyaman tetapi juga stylish, sempurna untuk berbagai aktivitas Anda dan cocok untuk segala suasana, dari santai hingga semi-formal.</p>
+                <h4>Discount up to 70%</h4>
+            </div>
+        </div>
+
+        <div class="produk-card" data-aos="fade-up">
+            <img src="../img/produk/8.jpg" alt="Produk3">
+            <div class="produk-descripsi">
+                <h3>Aksesoris</h3>
+                <p>Aksesoris trendi yang menambah sentuhan elegan pada penampilan Anda. Ideal untuk melengkapi gaya sehari-hari atau menonjolkan pesona Anda di acara spesial.</p>
+                <h4>Discount up to 70%</h4>
+            </div>
+        </div>
+    </div>
+</section>
+@* Section Produk end *@

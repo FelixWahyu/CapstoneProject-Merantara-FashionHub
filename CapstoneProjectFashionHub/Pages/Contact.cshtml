@@ -1,0 +1,109 @@
+﻿@page
+@model CapstoneProjectFashionHub.Pages.ContactModel
+@{
+    ViewData["Title"] = "Kontak page";
+}
+
+@* Contact Section start *@
+<section class="contact">
+    <div class="text-contact">
+        <h2><span>Ada yang bisa</span> Kami bantu?</h2>
+        <p>Terima kasih sudah mengunjungi Kami! Jika memiliki pertanyaan seputar FashionHub, hubungi kami melalui kontak di laman ini.</p>
+    </div>
+    
+    @* FAQ Section Start*@
+  <section class="faq">
+    <h2>Pertanyaan yang Sering Diajukan</h2>
+
+    <div class="faq-item" data-aos="fade-up">
+        <h3>
+            Apa itu FashionHub?
+        </h3>
+        <p>FashionHub adalah platform online yang menyediakan berbagai macam produk fashion terkini dan terjangkau untuk semua kalangan.</p>
+    </div>
+    <div class="faq-item" data-aos="fade-up">
+        <h3>
+            Bagaimana cara memesan produk di FashionHub?
+        </h3>
+        <p>Anda bisa memesan produk melalui website kami dengan membuat akun, memilih produk yang diinginkan, dan mengikuti langkah-langkah checkout yang ada.</p>
+    </div>
+    <div class="faq-item" data-aos="fade-up">
+        <h3>
+            Apakah FashionHub menyediakan layanan pengiriman internasional?
+        </h3>
+        <p>Saat ini, FashionHub hanya melayani pengiriman dalam negeri. Kami sedang bekerja untuk bisa melayani pengiriman internasional di masa mendatang.</p>
+    </div>
+    <div class="faq-item" data-aos="fade-up">
+        <h3>
+            Bagaimana cara menghubungi customer service FashionHub?
+        </h3>
+        <p>Anda bisa menghubungi customer service kami melalui email di support@fashionhub.com atau melalui form kontak yang tersedia di laman ini.</p>
+    </div>
+
+<section class="approval" data-aos="fade-up">
+    <div class="approval-form">
+        <div class="icon-karyawan">
+            <img src="../img/users.png" alt="Icon Users" />
+        </div>
+
+        <iframe width="700px" height="480px" 
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=xF6513-aYEKy4-tT8KyEAb8vcnz7qQhBpokFHSievz1UM01IOEhBVk5UREZFUlRNUzA2U1M3STJHTy4u&embed=true" 
+            frameborder="0" marginwidth="0" marginheight="0" 
+            style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> 
+        </iframe>
+    </div>
+</section>
+
+@* Section Form start *@
+@if(TempData["alertMessage"] !=null ){
+    <div class="alert alert-success">
+        @TempData["alertMessage"]
+    </div>
+}
+<div class="input-form" data-aos="fade-right">
+  <form id="contactForm" method="post">
+    <h2>Hubungi Kami</h2>
+    <p>Jika ada saran atau kritik mengenai perusahan atau layanan kami bisa isi form berikut, saran dan kritik Anda sangat berharga bagi kemajuan perusahaan kami</p>
+    <div class="form-group">
+        <input type="text" id="Nama" name="Nama" placeholder="Nama lengkap" asp-for="ContactForm.Nama">
+        <span asp-validation-for="ContactForm.Nama" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="email" id="Email" name="Email" placeholder="Email" asp-for="ContactForm.Email">
+        <span asp-validation-for="ContactForm.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <select id="Topik" name="Topik" asp-for="ContactForm.Topik">
+            <option value="" disabled selected>Pilih topik</option>
+            <option value="General">General</option>
+            <option value="Support">Support</option>
+            <option value="Feedback">Feedback</option>
+        </select>
+        <span asp-validation-for="ContactForm.Topik" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <textarea id="Pesan" name="Pesan" placeholder="Tulis pesan" asp-for="ContactForm.Pesan"></textarea>
+        <span asp-validation-for="ContactForm.Pesan" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit">Kirim</button>
+    </div>
+ </form>
+</div>
+@* Section Form end *@
+</section>
+@* FAQ Section End*@
+</section>
+@* Contact Section end *@
+
+@* Map start *@
+ <div class="row">
+     <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253292.47519626128!2d112.40081801279139!3d-7.275512827126228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1717820366127!5m2!1sid!2sid"  
+         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map">
+     </iframe>
+    </div>
+@* Map end *@
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
